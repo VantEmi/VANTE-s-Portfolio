@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        VANTE PORTFOLIO — index.html
+        Brand: VANTE
+        Sections: Animation, Photography, Videography
+        Author: Emiliano Cervantes
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANTE — Creative Studio</title>
+
+    <!-- SEO BASIC -->
+    <meta name="description" content="VANTE is a creative studio focused on photography, animation, videography and cinematic visual storytelling.">
+    <meta name="author" content="Emiliano Cervantes">
+    <meta name="keywords" content="VANTE, Emiliano Cervantes, Photography, Animation, Videography, 3D, Creative Studio, Film, Portfolio">
+
+    <!-- THEME COLOR -->
+    <meta name="theme-color" content="#0D0B14">
+
+    <!-- FAVICON -->
+    <!-- CAMBIAR AQUÍ: coloca tu favicon en assets/ui/favicon.png -->
+    <link rel="icon" href="assets/ui/favicon.png" type="image/png">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+        LOADER CINEMATOGRÁFICO
+        Este loader se ocultará con JavaScript cuando cargue la página.
+    ========================================================== -->
+    <div class="loader" id="loader">
+        <div class="loader__content">
+            <!-- CAMBIAR AQUÍ: logo animado de carga -->
+            <img src="assets/logo/logo-white.png" alt="VANTE Logo" class="loader__logo">
+            <p class="loader__text">Creative Studio</p>
+        </div>
+    </div>
+
+    <!-- =========================================================
+        EFECTOS GLOBALES
+    ========================================================== -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+    <div class="ambient-light ambient-light--one" aria-hidden="true"></div>
+    <div class="ambient-light ambient-light--two" aria-hidden="true"></div>
+
+    <!-- Cursor personalizado -->
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+    <!-- Barra de progreso de scroll -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- =========================================================
+        NAVBAR
+    ========================================================== -->
+    <header class="site-header" id="siteHeader">
+        <nav class="navbar">
+
+            <a href="#home" class="navbar__brand" aria-label="Go to home">
+                <!-- CAMBIAR AQUÍ: Logo principal -->
+                <img src="assets/logo/logo-white.png" alt="VANTE Logo" class="navbar__logo">
+            </a>
+
+            <button class="navbar__toggle" id="navToggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar__menu" id="navMenu">
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#animation">Animation</a></li>
+                <li><a href="#photography">Photography</a></li>
+                <li><a href="#videography">Videography</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="navbar__cta">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- =========================================================
+        HERO PRINCIPAL
+    ========================================================== -->
+    <main>
+
+        <section class="hero section" id="home">
+
+            <!-- 
+                CAMBIAR AQUÍ: Video principal de fondo.
+                Ruta esperada:
+                assets/hero/hero-video.mp4
+
+                Recomendación:
+                - MP4
+                - Horizontal
+                - 10 a 30 segundos
+                - Sin audio o con audio no necesario
+                - Exportado ligero para web
+            -->
+            <video class="hero__video" autoplay muted loop playsinline preload="metadata">
+                <source src="assets/hero/hero-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="hero__overlay"></div>
+
+            <div class="hero__content reveal">
+                <p class="hero__eyebrow">Photography • Animation • Videography</p>
+
+                <h1 class="hero__title">
+                    VANTE
+                </h1>
+
+                <p class="hero__subtitle">
+                    Creative studio crafting cinematic worlds through light, motion and visual storytelling.
+                </p>
+
+                <div class="hero__actions">
+                    <a href="#featured" class="button button--primary">Explore Work</a>
+                    <a href="#showreel" class="button button--ghost">Watch Showreel</a>
+                </div>
+            </div>
+
+            <div class="hero__bottom">
+                <p class="hero__scroll">Scroll</p>
+                <span class="hero__line"></span>
+            </div>
+
+        </section>
+
+        <!-- =========================================================
+            SHOWREEL
+        ========================================================== -->
+        <section class="showreel section" id="showreel">
+
+            <div class="section-heading reveal">
+                <p class="section-heading__eyebrow">Main Reel</p>
+                <h2 class="section-heading__title">Showreel</h2>
+                <p class="section-heading__text">
+                    A condensed look into the visual language of VANTE: atmosphere, rhythm, texture and cinematic composition.
+                </p>
+            </div>
+
+            <div class="showreel__frame reveal">
+                <!-- 
+                    CAMBIAR AQUÍ: Video showreel.
+                    Ruta esperada:
+                    assets/hero/showreel.mp4
+
+                    Puedes usar el mismo video del hero o un reel más completo.
+                -->
+                <video class="showreel__video" autoplay muted loop playsinline controls preload="metadata">
+                    <source src="assets/hero/showreel.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+        </section>
+
+        <!-- =========================================================
+            FEATURED WORK
+        ========================================================== -->
+        <section class="featured section" id="featured">
+
+            <div class="section-heading reveal">
+                <p class="section-heading__eyebrow">Selected Work</p>
+                <h2 class="section-heading__title">Featured Projects</h2>
+                <p class="section-heading__text">
+                    A curated selection of visual projects across animation, photography and videography.
+                </p>
+            </div>
+
+            <div class="featured__grid">
+
+                <!-- 
+                    DUPLICA O EDITA ESTOS BLOQUES PARA TUS PROYECTOS DESTACADOS.
+                    Cada proyecto usa una imagen de portada o un video preview.
+                -->
+
+                <!-- FEATURED 01 -->
+                <article class="featured-card reveal">
+                    <a href="#animation" class="featured-card__media">
+                        <!-- CAMBIAR AQUÍ: portada del proyecto destacado -->
+                        <img src="animation/project-01/cover.jpg" alt="Featured animation project">
+                    </a>
+                    <div class="featured-card__content">
+                        <p class="featured-card__category">Animation & 3D</p>
+                        <h3 class="featured-card__title">Hospital Corridor</h3>
+                        <p class="featured-card__text">
+                            Cinematic lighting study, horror atmosphere and environmental storytelling.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- FEATURED 02 -->
+                <article class="featured-card reveal">
+                    <a href="#animation" class="featured-card__media">
+                        <img src="animation/project-02/cover.jpg" alt="Featured game environment project">
+                    </a>
+                    <div class="featured-card__content">
+                        <p class="featured-card__category">Worldbuilding</p>
+                        <h3 class="featured-card__title">Shattered Veil</h3>
+                        <p class="featured-card__text">
+                            Dark fantasy, post-apocalyptic visual development and atmospheric concepts.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- FEATURED 03 -->
+                <article class="featured-card reveal">
+                    <a href="#photography" class="featured-card__media">
+                        <img src="photography/portraits/portrait-01.jpg" alt="Featured portrait photography">
+                    </a>
+                    <div class="featured-card__content">
+                        <p class="featured-card__category">Photography</p>
+                        <h3 class="featured-card__title">Portrait Series</h3>
+                        <p class="featured-card__text">
+                            Intimate portrait work focused on emotion, contrast and natural presence.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- FEATURED 04 -->
+                <article class="featured-card reveal">
+                    <a href="#videography" class="featured-card__media">
+                        <img src="videography/music-videos/cover.jpg" alt="Featured music video">
+                    </a>
+                    <div class="featured-card__content">
+                        <p class="featured-card__category">Videography</p>
+                        <h3 class="featured-card__title">Music Video</h3>
+                        <p class="featured-card__text">
+                            Rhythm, movement and visual mood designed around musical storytelling.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- FEATURED 05 -->
+                <article class="featured-card reveal">
+                    <a href="#photography" class="featured-card__media">
+                        <img src="photography/cinematic/cinematic-01.jpg" alt="Featured cinematic photography">
+                    </a>
+                    <div class="featured-card__content">
+                        <p class="featured-card__category">Cinematic Stills</p>
+                        <h3 class="featured-card__title">Light Studies</h3>
+                        <p class="featured-card__text">
+                            Still imagery shaped by atmosphere, shadow and cinematic framing.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- FEATURED 06 -->
+                <article class="featured-card reveal">
+                    <a href="#videography" class="featured-card__media">
+                        <img src="videography/short-films/cover.jpg" alt="Featured short film">
+                    </a>
+                    <div class="featured-card__content">
+                        <p class="featured-card__category">Short Film</p>
+                        <h3 class="featured-card__title">Narrative Piece</h3>
+                        <p class="featured-card__text">
+                            A compact visual narrative exploring mood, silence and emotional tension.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- =========================================================
+            ANIMATION & 3D
+        ========================================================== -->
+        <section class="animation section" id="animation">
+
+            <div class="section-heading reveal">
+                <p class="section-heading__eyebrow">Motion • Form • Atmosphere</p>
+                <h2 class="section-heading__title">Animation & 3D</h2>
+                <p class="section-heading__text">
+                    Projects focused on 3D environments, cinematic animation, lighting, modeling, visual development and digital storytelling.
+                </p>
+            </div>
+
+            <div class="project-list">
+
+                <!-- =====================================================
+                    PROYECTO DE ANIMACIÓN 01
+                    Para agregar un proyecto nuevo:
+                    1. Duplica este article completo.
+                    2. Crea una carpeta nueva: animation/project-07/
+                    3. Cambia rutas, título y descripción.
+                ====================================================== -->
+                <article class="project-card project-card--large reveal">
+
+                    <div class="project-card__media">
+                        <!-- 
+                            CAMBIAR AQUÍ: video principal del proyecto.
+                            Ruta:
+                            animation/project-01/showcase.mp4
+                        -->
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="animation/project-01/showcase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="project-card__content">
+                        <p class="project-card__category">Animation & 3D</p>
+                        <h3 class="project-card__title">Hospital Corridor</h3>
+                        <p class="project-card__description">
+                            A dark corridor sequence focused on cinematic lighting, horror atmosphere, flickering emergency lights and environmental tension.
+                        </p>
+
+                        <ul class="project-card__meta">
+                            <li>Blender</li>
+                            <li>Lighting</li>
+                            <li>Environment Design</li>
+                            <li>Cinematic Animation</li>
+                        </ul>
+
+                        <div class="project-card__gallery">
+                            <!-- CAMBIAR AQUÍ: imágenes del proyecto -->
+                            <button class="gallery-thumb" data-lightbox="animation/project-01/image-01.jpg">
+                                <img src="animation/project-01/image-01.jpg" alt="Hospital Corridor image 01">
+                            </button>
+
+                            <button class="gallery-thumb" data-lightbox="animation/project-01/image-02.jpg">
+                                <img src="animation/project-01/image-02.jpg" alt="Hospital Corridor image 02">
+                            </button>
+
+                            <button class="gallery-thumb" data-lightbox="animation/project-01/image-03.jpg">
+                                <img src="animation/project-01/image-03.jpg" alt="Hospital Corridor image 03">
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!-- PROYECTO DE ANIMACIÓN 02 -->
+                <article class="project-card reveal">
+
+                    <div class="project-card__media">
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="animation/project-02/showcase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="project-card__content">
+                        <p class="project-card__category">Game Concept</p>
+                        <h3 class="project-card__title">Shattered Veil</h3>
+                        <p class="project-card__description">
+                            Visual exploration for a dark fantasy post-apocalyptic world combining ritual magic, corrupted lifeforms and worn futuristic structures.
+                        </p>
+
+                        <ul class="project-card__meta">
+                            <li>Concept Art</li>
+                            <li>Worldbuilding</li>
+                            <li>3D Blocking</li>
+                            <li>Fantasy Horror</li>
+                        </ul>
+
+                        <div class="project-card__gallery">
+                            <button class="gallery-thumb" data-lightbox="animation/project-02/image-01.jpg">
+                                <img src="animation/project-02/image-01.jpg" alt="Shattered Veil image 01">
+                            </button>
+
+                            <button class="gallery-thumb" data-lightbox="animation/project-02/image-02.jpg">
+                                <img src="animation/project-02/image-02.jpg" alt="Shattered Veil image 02">
+                            </button>
+
+                            <button class="gallery-thumb" data-lightbox="animation/project-02/image-03.jpg">
+                                <img src="animation/project-02/image-03.jpg" alt="Shattered Veil image 03">
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!-- PROYECTO DE ANIMACIÓN 03 -->
+                <article class="project-card reveal">
+
+                    <div class="project-card__media">
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="animation/project-03/showcase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="project-card__content">
+                        <p class="project-card__category">Character / Creature</p>
+                        <h3 class="project-card__title">Creature Study</h3>
+                        <p class="project-card__description">
+                            Character or creature animation study focused on silhouette, physicality, mood and dramatic presentation.
+                        </p>
+
+                        <ul class="project-card__meta">
+                            <li>Animation</li>
+                            <li>Creature Design</li>
+                            <li>Motion Study</li>
+                            <li>Rendering</li>
+                        </ul>
+
+                        <div class="project-card__gallery">
+                            <button class="gallery-thumb" data-lightbox="animation/project-03/image-01.jpg">
+                                <img src="animation/project-03/image-01.jpg" alt="Creature Study image 01">
+                            </button>
+
+                            <button class="gallery-thumb" data-lightbox="animation/project-03/image-02.jpg">
+                                <img src="animation/project-03/image-02.jpg" alt="Creature Study image 02">
+                            </button>
+
+                            <button class="gallery-thumb" data-lightbox="animation/project-03/image-03.jpg">
+                                <img src="animation/project-03/image-03.jpg" alt="Creature Study image 03">
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!-- PROYECTO DE ANIMACIÓN 04 -->
+                <article class="project-card reveal">
+
+                    <div class="project-card__media">
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="animation/project-04/showcase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="project-card__content">
+                        <p class="project-card__category">Simulation / Motion</p>
+                        <h3 class="project-card__title">Motion Experiment</h3>
+                        <p class="project-card__description">
+                            Experimental animation study using motion, timing, rhythm, texture or simulation as the central visual language.
+                        </p>
+
+                        <ul class="project-card__meta">
+                            <li>Simulation</li>
+                            <li>Motion</li>
+                            <li>Visual Rhythm</li>
+                            <li>Experimental</li>
+                        </ul>
+
+                        <div class="project-card__gallery">
+                            <button class="gallery-thumb" data-lightbox="animation/project-04/image-01.jpg">
+                                <img src="animation/project-04/image-01.jpg" alt="Motion Experiment image 01">
+                            </button>
+
+                            <button class="gallery-thumb" data-lightbox="animation/project-04/image-02.jpg">
+                                <img src="animation/project-04/image-02.jpg" alt="Motion Experiment image 02">
+                            </button>
+
+                            <button class="gallery-thumb" data-lightbox="animation/project-04/image-03.jpg">
+                                <img src="animation/project-04/image-03.jpg" alt="Motion Experiment image 03">
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!-- PROYECTO DE ANIMACIÓN 05 -->
+                <article class="project-card reveal">
+
+                    <div class="project-card__media">
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="animation/project-05/showcase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="project-card__content">
+                        <p class="project-card__category">Environment</p>
+                        <h3 class="project-card__title">Digital Environment</h3>
+                        <p class="project-card__description">
+                            Environment design piece exploring scale, atmosphere, composition and cinematic depth.
+                        </p>
+
+                        <ul class="project-card__meta">
+                            <li>Environment Art</li>
+                            <li>Composition</li>
+                            <li>Lighting</li>
+                            <li>Look Development</li>
+                        </ul>
+
+                        <div class="project-card__gallery">
+                            <button class="gallery-thumb" data-lightbox="animation/project-05/image-01.jpg">
+                                <img src="animation/project-05/image-01.jpg" alt="Digital Environment image 01">
+                            </button>
+
+                            <button class="gallery-thumb" data-lightbox="animation/project-05/image-02.jpg">
+                                <img src="animation/project-05/image-02.jpg" alt="Digital Environment image 02">
+                            </button>
+
+                            <button class="gallery-thumb" data-lightbox="animation/project-05/image-03.jpg">
+                                <img src="animation/project-05/image-03.jpg" alt="Digital Environment image 03">
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!-- PROYECTO DE ANIMACIÓN 06 -->
+                <article class="project-card reveal">
+
+                    <div class="project-card__media">
+                        <video autoplay muted loop playsinline preload="metadata">
+                            <source src="animation/project-06/showcase.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="project-card__content">
+                        <p class="project-card__category">Personal Study</p>
+                        <h3 class="project-card__title">Visual Development Study</h3>
+                        <p class="project-card__description">
+                            Personal study focused on refining visual language, stylization, mood and cinematic storytelling.
+                        </p>
+
+                        <ul class="project-card__meta">
+                            <li>Visual Development</li>
+                            <li>Art Direction</li>
+                            <li>3D</li>
+                            <li>Rendering</li>
+                        </ul>
+
+                        <div class="project-card__gallery">
+                            <button class="gallery-thumb" data-lightbox="animation/project-06/image-01.jpg">
+                                <img src="animation/project-06/image-01.jpg" alt="Visual Development image 01">
+                            </button>
+
+                            <button class="gallery-thumb" data-lightbox="animation/project-06/image-02.jpg">
+                                <img src="animation/project-06/image-02.jpg" alt="Visual Development image 02">
+                            </button>
+
+                            <button class="gallery-thumb" data-lightbox="animation/project-06/image-03.jpg">
+                                <img src="animation/project-06/image-03.jpg" alt="Visual Development image 03">
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+        <!-- =========================================================
+            PHOTOGRAPHY
+        ========================================================== -->
+        <section class="photography section" id="photography">
+
+            <div class="section-heading reveal">
+                <p class="section-heading__eyebrow">Light • Emotion • Composition</p>
+                <h2 class="section-heading__title">Photography</h2>
+                <p class="section-heading__text">
+                    A visual collection of portraits, concerts, products and cinematic stills shaped by contrast, natural presence and atmosphere.
+                </p>
+            </div>
+
+            <!-- FILTROS DE FOTOGRAFÍA -->
+            <div class="filter-bar reveal" aria-label="Photography filters">
+                <button class="filter-button active" data-filter="all">All</button>
+                <button class="filter-button" data-filter="portraits">Portraits</button>
+                <button class="filter-button" data-filter="concerts">Concerts</button>
+                <button class="filter-button" data-filter="products">Products</button>
+                <button class="filter-button" data-filter="cinematic">Cinematic</button>
+                <button class="filter-button" data-filter="miscellaneous">Misc</button>
+            </div>
+
+            <div class="photo-grid">
+
+                <!-- 
+                    PARA AGREGAR MÁS FOTOS:
+                    1. Copia uno de estos botones completos.
+                    2. Cambia la ruta de src.
+                    3. Cambia data-category según la categoría.
+                    4. Cambia data-lightbox con la misma ruta de imagen.
+                -->
+
+                <!-- PORTRAITS -->
+                <button class="photo-item reveal" data-category="portraits" data-lightbox="photography/portraits/portrait-01.jpg">
+                    <img src="photography/portraits/portrait-01.jpg" alt="Portrait photography 01">
+                    <span>Portraits</span>
+                </button>
+
+                <button class="photo-item reveal" data-category="portraits" data-lightbox="photography/portraits/portrait-02.jpg">
+                    <img src="photography/portraits/portrait-02.jpg" alt="Portrait photography 02">
+                    <span>Portraits</span>
+                </button>
+
+                <button class="photo-item reveal" data-category="portraits" data-lightbox="photography/portraits/portrait-03.jpg">
+                    <img src="photography/portraits/portrait-03.jpg" alt="Portrait photography 03">
+                    <span>Portraits</span>
+                </button>
+
+                <!-- CONCERTS -->
+                <button class="photo-item reveal" data-category="concerts" data-lightbox="photography/concerts/concert-01.jpg">
+                    <img src="photography/concerts/concert-01.jpg" alt="Concert photography 01">
+                    <span>Concerts</span>
+                </button>
+
+                <button class="photo-item reveal" data-category="concerts" data-lightbox="photography/concerts/concert-02.jpg">
+                    <img src="photography/concerts/concert-02.jpg" alt="Concert photography 02">
+                    <span>Concerts</span>
+                </button>
+
+                <button class="photo-item reveal" data-category="concerts" data-lightbox="photography/concerts/concert-03.jpg">
+                    <img src="photography/concerts/concert-03.jpg" alt="Concert photography 03">
+                    <span>Concerts</span>
+                </button>
+
+                <!-- PRODUCTS -->
+                <button class="photo-item reveal" data-category="products" data-lightbox="photography/products/product-01.jpg">
+                    <img src="photography/products/product-01.jpg" alt="Product photography 01">
+                    <span>Products</span>
+                </button>
+
+                <button class="photo-item reveal" data-category="products" data-lightbox="photography/products/product-02.jpg">
+                    <img src="photography/products/product-02.jpg" alt="Product photography 02">
+                    <span>Products</span>
+                </button>
+
+                <button class="photo-item reveal" data-category="products" data-lightbox="photography/products/product-03.jpg">
+                    <img src="photography/products/product-03.jpg" alt="Product photography 03">
+                    <span>Products</span>
+                </button>
+
+                <!-- CINEMATIC -->
+                <button class="photo-item reveal" data-category="cinematic" data-lightbox="photography/cinematic/cinematic-01.jpg">
+                    <img src="photography/cinematic/cinematic-01.jpg" alt="Cinematic photography 01">
+                    <span>Cinematic</span>
+                </button>
+
+                <button class="photo-item reveal" data-category="cinematic" data-lightbox="photography/cinematic/cinematic-02.jpg">
+                    <img src="photography/cinematic/cinematic-02.jpg" alt="Cinematic photography 02">
+                    <span>Cinematic</span>
+                </button>
+
+                <button class="photo-item reveal" data-category="cinematic" data-lightbox="photography/cinematic/cinematic-03.jpg">
+                    <img src="photography/cinematic/cinematic-03.jpg" alt="Cinematic photography 03">
+                    <span>Cinematic</span>
+                </button>
+
+                <!-- MISCELLANEOUS -->
+                <button class="photo-item reveal" data-category="miscellaneous" data-lightbox="photography/miscellaneous/misc-01.jpg">
+                    <img src="photography/miscellaneous/misc-01.jpg" alt="Miscellaneous photography 01">
+                    <span>Misc</span>
+                </button>
+
+                <button class="photo-item reveal" data-category="miscellaneous" data-lightbox="photography/miscellaneous/misc-02.jpg">
+                    <img src="photography/miscellaneous/misc-02.jpg" alt="Miscellaneous photography 02">
+                    <span>Misc</span>
+                </button>
+
+                <button class="photo-item reveal" data-category="miscellaneous" data-lightbox="photography/miscellaneous/misc-03.jpg">
+                    <img src="photography/miscellaneous/misc-03.jpg" alt="Miscellaneous photography 03">
+                    <span>Misc</span>
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================================
+            VIDEOGRAPHY
+        ========================================================== -->
+        <section class="videography section" id="videography">
+
+            <div class="section-heading reveal">
+                <p class="section-heading__eyebrow">Film • Rhythm • Story</p>
+                <h2 class="section-heading__title">Videography</h2>
+                <p class="section-heading__text">
+                    Music videos, short films, commercials and cinematic experiments built around rhythm, atmosphere and visual direction.
+                </p>
+            </div>
+
+            <div class="video-grid">
+
+                <!-- 
+                    PARA AGREGAR MÁS VIDEOS:
+                    1. Duplica un article.
+                    2. Cambia la carpeta.
+                    3. Cambia el video y la portada.
+                -->
+
+                <!-- VIDEO 01 -->
+                <article class="video-card reveal">
+                    <div class="video-card__media">
+                        <!-- CAMBIAR AQUÍ: video de videoclip -->
+                        <video autoplay muted loop playsinline preload="metadata" poster="videography/music-videos/cover.jpg">
+                            <source src="videography/music-videos/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="video-card__content">
+                        <p class="video-card__category">Music Video</p>
+                        <h3 class="video-card__title">Music Video Project</h3>
+                        <p class="video-card__text">
+                            A rhythm-driven visual piece designed to support mood, performance and musical identity.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- VIDEO 02 -->
+                <article class="video-card reveal">
+                    <div class="video-card__media">
+                        <video autoplay muted loop playsinline preload="metadata" poster="videography/commercials/cover.jpg">
+                            <source src="videography/commercials/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="video-card__content">
+                        <p class="video-card__category">Commercial</p>
+                        <h3 class="video-card__title">Commercial Piece</h3>
+                        <p class="video-card__text">
+                            A concise visual piece focused on product, brand presence and cinematic presentation.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- VIDEO 03 -->
+                <article class="video-card reveal">
+                    <div class="video-card__media">
+                        <video autoplay muted loop playsinline preload="metadata" poster="videography/short-films/cover.jpg">
+                            <source src="videography/short-films/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="video-card__content">
+                        <p class="video-card__category">Short Film</p>
+                        <h3 class="video-card__title">Short Film</h3>
+                        <p class="video-card__text">
+                            Narrative visual storytelling using silence, pacing, framing and emotional tension.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- VIDEO 04 -->
+                <article class="video-card reveal">
+                    <div class="video-card__media">
+                        <video autoplay muted loop playsinline preload="metadata" poster="videography/behind-the-scenes/cover.jpg">
+                            <source src="videography/behind-the-scenes/video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="video-card__content">
+                        <p class="video-card__category">Behind The Scenes</p>
+                        <h3 class="video-card__title">Process Film</h3>
+                        <p class="video-card__text">
+                            A behind-the-scenes piece showing creative process, direction, production and atmosphere on set.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================================
+            ABOUT
+        ========================================================== -->
+        <section class="about section" id="about">
+
+            <div class="about__grid">
+
+                <div class="about__media reveal">
+                    <!-- 
+                        CAMBIAR AQUÍ: Foto tuya o imagen de estudio.
+                        Ruta esperada:
+                        assets/profile/profile.jpg
+                    -->
+                    <img src="assets/profile/profile.jpg" alt="Emiliano Cervantes portrait">
+                </div>
+
+                <div class="about__content reveal">
+                    <p class="section-heading__eyebrow">About VANTE</p>
+                    <h2 class="about__title">A cinematic visual identity built through light, motion and emotion.</h2>
+
+                    <p class="about__text">
+                        VANTE is the creative identity of Emiliano Cervantes, focused on photography, animation, videography and visual storytelling. The work explores cinematic atmospheres, dramatic composition, emotional presence and the creation of visual worlds with a strong sense of mood.
+                    </p>
+
+                    <p class="about__text">
+                        The studio vision is to grow into a multidisciplinary production space where film, music videos, photography, animation and 3D projects can coexist under one visual language.
+                    </p>
+
+                    <div class="about__skills">
+                        <span>Blender</span>
+                        <span>Maya</span>
+                        <span>Substance Painter</span>
+                        <span>DaVinci Resolve</span>
+                        <span>Premiere Pro</span>
+                        <span>After Effects</span>
+                        <span>Photoshop</span>
+                        <span>Illustrator</span>
+                    </div>
+
+                    <div class="about__actions">
+                        <!-- CAMBIAR AQUÍ: CV o resume si lo tienes -->
+                        <a href="documents/cv.pdf" class="button button--primary" target="_blank" rel="noopener noreferrer">View CV</a>
+                        <a href="#contact" class="button button--ghost">Work With VANTE</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================================
+            CONTACT
+        ========================================================== -->
+        <section class="contact section" id="contact">
+
+            <div class="contact__content reveal">
+                <p class="section-heading__eyebrow">Let’s Create</p>
+                <h2 class="contact__title">Ready to build something cinematic?</h2>
+                <p class="contact__text">
+                    For collaborations, photography sessions, music videos, animation projects or visual development work, get in touch.
+                </p>
+
+                <div class="contact__links">
+
+                    <!-- 
+                        CAMBIAR AQUÍ:
+                        Sustituye # por tus enlaces reales.
+                    -->
+
+                    <a href="mailto:a850272105@gmail.com" class="contact-link">
+                        <span>Email</span>
+                        <small>a850272105@gmail.com</small>
+                    </a>
+
+                    <a href="#" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <span>Instagram</span>
+                        <small>@yourinstagram</small>
+                    </a>
+
+                    <a href="#" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <span>LinkedIn</span>
+                        <small>Emiliano Cervantes</small>
+                    </a>
+
+                    <a href="#" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <span>YouTube</span>
+                        <small>VANTE</small>
+                    </a>
+
+                    <a href="#" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <span>ArtStation</span>
+                        <small>VANTE</small>
+                    </a>
+
+                    <a href="#" class="contact-link" target="_blank" rel="noopener noreferrer">
+                        <span>Vimeo</span>
+                        <small>VANTE</small>
+                    </a>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================================================
+        FOOTER
+    ========================================================== -->
+    <footer class="footer">
+
+        <div class="footer__inner">
+            <a href="#home" class="footer__brand">
+                <!-- CAMBIAR AQUÍ: Logo footer -->
+                <img src="assets/logo/logo-white.png" alt="VANTE Logo">
+            </a>
+
+            <p class="footer__text">
+                © <span id="currentYear"></span> VANTE. Creative Studio by Emiliano Cervantes.
+            </p>
+
+            <a href="#home" class="footer__top">Back to top</a>
+        </div>
+
+    </footer>
+
+    <!-- =========================================================
+        LIGHTBOX
+        El JS lo usará para abrir imágenes grandes.
+    ========================================================== -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Close image viewer">
+            ×
+        </button>
+
+        <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Previous image">
+            ‹
+        </button>
+
+        <div class="lightbox__content">
+            <img src="" alt="Expanded portfolio image" id="lightboxImage">
+        </div>
+
+        <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Next image">
+            ›
+        </button>
+    </div>
+
+    <!-- =========================================================
+        SCRIPT
+    ========================================================== -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
